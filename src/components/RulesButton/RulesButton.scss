@@ -1,0 +1,17 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+.rulesbutton {
+  background: none;
+  color: inherit;
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 1rem 3rem;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  font-size: 1.6rem;
+  color: white;
+  letter-spacing: 2px;
+}
