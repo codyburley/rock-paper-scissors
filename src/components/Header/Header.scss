@@ -1,0 +1,36 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+.header {
+  border: 3px solid $color-header-outline;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+
+  &__logo {
+    width: 8rem;
+  }
+
+  &__score-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 2.4rem;
+    border-radius: 4px;
+  }
+
+  &__score-title {
+    color: $color-score-text;
+    letter-spacing: 1px;
+  }
+
+  &__score {
+    font-size: 3.6rem;
+    color: $color-dark-text;
+    font-weight: 700;
+  }
+}

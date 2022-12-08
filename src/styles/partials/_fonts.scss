@@ -1,0 +1,15 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+@mixin font-page-header() {
+  font-size: 1.4rem;
+  color: $color-dark-text;
+  border-bottom: 3px solid $color-dark-text;
+  font-weight: 500;
+
+  @include tablet {
+    font-size: 1.4rem;
+  }
+}
