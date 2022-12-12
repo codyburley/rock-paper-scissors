@@ -1,0 +1,117 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+.result {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 4.7rem;
+  justify-content: center;
+  width: 33.7rem;
+
+  &__player-container {
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__house {
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    color: white;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 3rem;
+  }
+
+  &__icon {
+    height: 13rem;
+    width: 13rem;
+    border-radius: 50%;
+    border-color: transparent;
+    border: 1.4rem solid;
+    background-size: 50%;
+
+
+    &--paper {
+      @include icon($iconPaper, $color-paper);
+
+      &--winner {
+        @include bigShadow($color-paper);
+      }
+    }
+
+    &--scissors {
+      @include icon($iconScissors, $color-scissors);
+
+      &--winner {
+        @include bigShadow($color-scissors);
+      }
+    }
+
+    &--rock {
+      @include icon($iconRock, $color-rock);
+
+      &--winner {
+        @include bigShadow($color-rock);
+      }
+    }
+  }
+
+  &__counter {
+    height: 13rem;
+    width: 13rem;
+    border-radius: 50%;
+    background-color: rgba($color: #000000, $alpha: .3);
+    font-size: 8rem;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__play {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__spacer {
+    height: 6rem;
+  }
+
+  &__text {
+    color: white;
+    font-size: 5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  &__play-again {
+    background-color: white;
+    width: fit-content;
+    text-align: center;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $color-dark-text;
+    font-weight: 600;
+    padding: 1.6rem 6rem;
+    border-radius: 6px;
+  }
+}

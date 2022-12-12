@@ -1,31 +1,38 @@
 import React from 'react';
 import './GameBoard.scss';
-import rock from '../../assets/images/icon-rock.svg';
-import paper from '../../assets/images/icon-paper.svg';
-import scissors from '../../assets/images/icon-scissors.svg';
+import { Link } from 'react-router-dom';
 
-const GameBoard = ({ playerChoice, setPlayerChoice }) => {
-  if (!playerChoice) {
-    return (
-      <section className='gameboard'>
-        <div className="gameboard__container gameboard__container--paper" onClick={() => setPlayerChoice('paper')}>
-          <div className="gameboard__wrapper">
-            <img src={paper} alt="Paper" className="gameboard__icon" />
-          </div>
-        </div>
-        <div className="gameboard__container gameboard__container--scissors" onClick={() => setPlayerChoice('scissors')}>
-          <div className="gameboard__wrapper">
-            <img src={scissors} alt="Scissors" className="gameboard__icon" />
-          </div>
-        </div>
-        <div className="gameboard__container gameboard__container--rock" onClick={() => setPlayerChoice('rock')}>
-          <div className="gameboard__wrapper">
-            <img src={rock} alt="Rock" className="gameboard__icon" />
-          </div>
-        </div>
-      </section>
-    )
-  }
+const GameBoard = ({ setPlayerChoice }) => {
+  const setChoice = (e) => {
+    setPlayerChoice(e.target.dataset.id);
+  };
+
+  return (
+    <section className='gameboard'>
+      <Link to="/result">
+        <div
+          data-id="paper"
+          onClick={setChoice}
+          className="gameboard__icon gameboard__icon--paper"
+        ></div>
+      </Link>
+      <Link to="/result">
+        <div
+          data-id="scissors"
+          onClick={setChoice}
+          className="gameboard__icon gameboard__icon--scissors"
+        ></div>
+      </Link>
+      <Link to="/result">
+        <div
+          data-id="rock"
+          onClick={setChoice}
+          className="gameboard__icon gameboard__icon--rock"
+        ></div>
+      </Link>
+    </section>
+  )
 }
+
 
 export default GameBoard
