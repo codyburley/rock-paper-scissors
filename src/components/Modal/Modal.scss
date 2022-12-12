@@ -23,13 +23,16 @@
   overflow-x: hidden;
   overflow-y: auto;
   outline: 0;
+
+  @include desktop {
+    left: center;
+  }
 }
 
 .modal {
   z-index: 100;
   background: white;
   position: relative;
-  // margin: 1.75rem auto;
   padding: 8rem 5% 5rem;
   height: 100vh;
   display: flex;
@@ -37,13 +40,54 @@
   justify-content: space-between;
   align-items: center;
 
+  @include desktop {
+    width: 60vh;
+    height: 50vh;
+    padding: 3rem;
+    margin: 13% auto;
+    border-radius: 10px;
+    // flex-direction: row;
+    // align-items: flex-start;
+  }
+
   &__title {
     font-size: 3rem;
     color: $color-dark-text;
+    margin: 0;
+
+    @include tablet {
+      font-size: 5rem;
+    }
+
+    @include desktop {
+      align-self: flex-start;
+    }
+  }
+
+  &__image {
+    @include tablet {
+      width: 70%;
+    }
+
+    @include desktop {
+      width: 70%;
+      // align-self: flex-end;
+    }
   }
 
   &__close {
     font-size: 6rem;
+
+    @include tablet {
+      font-size: 10rem;
+    }
+
+    @include desktop {
+      font-size: 6rem;
+      position: absolute;
+      top: 3rem;
+      right: 3rem;
+    }
   }
 }
 

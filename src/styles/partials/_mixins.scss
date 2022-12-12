@@ -62,3 +62,38 @@
     margin-bottom: 15rem;
   }
 }
+
+@mixin icon-style {
+  height: 13rem;
+  width: 13rem;
+  border-radius: 50%;
+  border-color: transparent;
+  border: 1.4rem solid;
+  background-size: 50%;
+
+  @include tablet {
+    height: 16rem;
+    width: 16rem;
+  }
+
+  @include desktop {
+    border: 2rem solid;
+    height: 20rem;
+    width: 20rem;
+  }
+}
+
+@mixin page-format {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 33.7rem;
+
+  @include tablet {
+    width: 50rem;
+  }
+
+  @include desktop {
+    width: 100rem;
+  }
+}

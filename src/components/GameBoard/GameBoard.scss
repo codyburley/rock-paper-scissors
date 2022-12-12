@@ -3,47 +3,25 @@
 @use '../../styles/partials/fonts' as *;
 
 .gameboard {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  @include page-format;
   gap: 2rem 5rem;
   background-image: url('../../assets/images/bg-triangle.svg');
   background-position: 50% 85%;
   background-size: 70%;
   background-repeat: no-repeat;
-  width: 33.7rem;
   margin-bottom: 9rem;
 
   @include tablet {
-    width: 50rem;
     gap: 6rem 12rem;
   }
 
   @include desktop {
     background-size: 41%;
-    width: 100rem;
     gap: 6rem 24rem;
   }
 
   &__icon {
-    height: 13rem;
-    width: 13rem;
-    border-radius: 50%;
-    border-color: transparent;
-    border: 1.4rem solid;
-    background-size: 50%;
-
-    @include tablet {
-      border: 1.6rem solid;
-      height: 16rem;
-      width: 16rem;
-    }
-
-    @include desktop {
-      border: 2rem solid;
-      height: 20rem;
-      width: 20rem;
-    }
+    @include icon-style;
 
     &--paper {
       @include icon($iconPaper, $color-paper);
