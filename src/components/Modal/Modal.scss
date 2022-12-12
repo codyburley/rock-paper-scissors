@@ -89,19 +89,23 @@
       right: 3rem;
     }
   }
-}
 
-.modal-header {
-  display: flex;
-  justify-content: center;
-}
+  &__header {
+    display: flex;
+    justify-content: center;
+  }
 
-.modal-close-button {
-  font-size: 1.4rem;
-  font-weight: 700;
-  line-height: 1;
-  color: #000;
-  opacity: .3;
-  cursor: pointer;
-  border: none;
+  &__button {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    opacity: .3;
+    cursor: pointer;
+    border: none;
+
+    &:hover {
+      opacity: .75;
+    }
+  }
 }

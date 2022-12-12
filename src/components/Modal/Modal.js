@@ -11,7 +11,7 @@ const Modal = ({ isShowing, hide }) => isShowing ? ReactDOM.createPortal(
         <h2 className='modal__title'>RULES</h2>
         <img className='modal__image' src={rules} alt="Game rules" />
         <div className="modal-header">
-          <button type="button" className="modal-close-button" data-dismiss="modal" aria-label="Close" onClick={hide}>
+          <button type="button" className="modal__button" data-dismiss="modal" aria-label="Close" onClick={hide}>
             <span aria-hidden="true" className='modal__close'>&times;</span>
           </button>
         </div>
