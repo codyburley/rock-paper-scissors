@@ -8,13 +8,10 @@ import useModal from './utility/useModal';
 import Modal from './components/Modal/Modal';
 import RulesButton from './components/RulesButton/RulesButton';
 
-
-function App() {
+const App = () => {
   const [score, setScore] = useState(0);
   const [playerChoice, setPlayerChoice] = useState('');
   const { isShowing, toggle } = useModal();
-
-  console.log(score)
 
   return (
     <div className="App">

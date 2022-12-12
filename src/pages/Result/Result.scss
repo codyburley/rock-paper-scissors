@@ -105,6 +105,10 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
+
+    @include desktop {
+      font-size: 6rem;
+    }
   }
 
   &__play-again {
@@ -121,6 +125,10 @@
 
     @include tablet {
       font-size: 1.8rem;
+    }
+
+    @include desktop {
+      font-size: 2.2rem;
     }
 
     &:hover {
